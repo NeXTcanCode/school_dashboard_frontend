@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 :root {
   /* Brand Colors */
@@ -26,19 +26,25 @@
   --border-radius-lg: 16px;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
   --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   background-color: var(--bg-body);
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   letter-spacing: -0.025em;
   color: var(--text-main);
@@ -105,13 +111,15 @@ a:hover {
   box-shadow: 0 6px 8px -1px rgba(79, 70, 229, 0.3);
 }
 
-.btn-secondary, .btn-light {
+.btn-secondary,
+.btn-light {
   background-color: white;
   color: var(--text-main);
   border: 1px solid #e5e7eb;
 }
 
-.btn-secondary:hover, .btn-light:hover {
+.btn-secondary:hover,
+.btn-light:hover {
   background-color: #f9fafb;
   border-color: #d1d5db;
 }
@@ -122,7 +130,8 @@ a:hover {
 }
 
 /* --- Form Elements --- */
-.form-control, .form-select {
+.form-control,
+.form-select {
   border-radius: var(--border-radius-sm);
   border: 1px solid #d1d5db;
   padding: 0.75rem 1rem;
@@ -130,7 +139,8 @@ a:hover {
   background-color: #f9fafb;
 }
 
-.form-control:focus, .form-select:focus {
+.form-control:focus,
+.form-select:focus {
   border-color: var(--primary-color);
   background-color: white;
   box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
@@ -210,11 +220,21 @@ a:hover {
 }
 
 /* --- Dashboard Stats Cards --- */
-.bg-primary { background-color: var(--primary-color) !important; }
-.bg-success { background-color: var(--success-color) !important; }
-.bg-warning { background-color: var(--warning-color) !important; }
-.bg-info { background-color: var(--info-color) !important; }
-.bg-danger { background-color: var(--danger-color) !important; }
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+.bg-info {
+  background-color: var(--info-color) !important;
+}
+.bg-danger {
+  background-color: var(--danger-color) !important;
+}
 
 /* Subtle gradients for stats cards */
 .bg-primary.text-white {
@@ -307,6 +327,6 @@ a:hover {
 }
 
 .dashboard-sidebar .sidebar-brand {
-    color: var(--text-main);
-    font-weight: 700;
+  color: var(--text-main);
+  font-weight: 700;
 }
