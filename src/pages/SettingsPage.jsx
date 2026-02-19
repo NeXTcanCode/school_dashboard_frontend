@@ -48,24 +48,20 @@ const SettingsPage = () => {
 
   const onSubmit = async (data) => {
     try {
-      console.log('Submitting features:', data.features);
-      const result = await updateFeatures(data.features).unwrap();
-      console.log('Update result:', result);
+      const result = await updateFeatures({
+        schoolName: data.schoolName,
+        features: data.features,
+      }).unwrap();
 
       // Update local Redux state
-      dispatch(updateSchoolName(data.schoolName));
+      dispatch(updateSchoolName(result?.data?.schoolName || data.schoolName));
 
-      if (result?.features) {
-        dispatch(updateSchoolFeatures(result.features));
-      } else if (result?.data?.features) {
+      if (result?.data?.features) {
         dispatch(updateSchoolFeatures(result.data.features));
-      } else {
-        dispatch(updateSchoolFeatures(data.features));
       }
 
       toast.success('Settings updated successfully!');
     } catch (err) {
-      console.error('Settings update error:', err);
       toast.error(err?.data?.message || 'Failed to update settings');
     }
   };

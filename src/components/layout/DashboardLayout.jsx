@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useGetSchoolProfileQuery } from '../../features/auth/authApi';
 import { setCredentials } from '../../features/auth/authSlice';
 import Sidebar from './Sidebar';
+import ChatbotFeature from '../common/ChatbotFeature';
 
 const DashboardLayout = () => {
   const dispatch = useDispatch();
@@ -22,15 +23,16 @@ const DashboardLayout = () => {
   return (
     <div className="dashboard-layout container-fluid">
       <div className="row">
-        <div className="col-md-3 col-lg-2 p-0 bg-dark min-vh-100 shadow">
+        <div className="col-xl-2 p-0 bg-dark min-vh-100 shadow dashboard-sidebar-shell">
           <Sidebar />
         </div>
-        <main className="col-md-9 col-lg-10 ms-sm-auto px-md-4 py-4 dashboard-main">
+        <main className="col-xl-10 ms-sm-auto px-md-4 py-4 dashboard-main">
           <div className="dashboard-main-inner">
             <Outlet />
           </div>
         </main>
       </div>
+      <ChatbotFeature />
     </div>
   );
 };

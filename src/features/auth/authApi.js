@@ -17,10 +17,10 @@ export const authApi = apiSlice.injectEndpoints({
       }),
     }),
     updateFeatures: builder.mutation({
-      query: (features) => ({
+      query: (payload) => ({
         url: '/school/features',
         method: 'PUT',
-        body: { features },
+        body: payload,
       }),
       invalidatesTags: ['School'],
     }),
