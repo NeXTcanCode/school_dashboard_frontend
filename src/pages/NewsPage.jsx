@@ -178,9 +178,12 @@ const NewsPage = () => {
   if (isNewsLoading) return <Loader fullPage />;
 
   return (
-    <div className="container-fluid">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2>News Feed</h2>
+    <div className="container-fluid content-page px-0">
+      <div className="content-page-header">
+        <div>
+          <h2 className="content-page-title">News Feed</h2>
+          <p className="content-page-subtitle">Share updates with a focused, readable feed.</p>
+        </div>
         <Button onClick={handleOpenCreate}>
           <i className="bi bi-plus-lg me-2"></i> Create News
         </Button>

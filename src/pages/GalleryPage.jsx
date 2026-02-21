@@ -168,9 +168,12 @@ const GalleryPage = () => {
   if (isLoading) return <Loader fullPage />;
 
   return (
-    <div className="container-fluid">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2>Photo Gallery</h2>
+    <div className="container-fluid content-page px-0">
+      <div className="content-page-header">
+        <div>
+          <h2 className="content-page-title">Photo Gallery</h2>
+          <p className="content-page-subtitle">Manage school memories in a clean visual archive.</p>
+        </div>
         <Button onClick={handleOpenCreate}>
           <i className="bi bi-plus-lg me-2"></i> Add Photos
         </Button>

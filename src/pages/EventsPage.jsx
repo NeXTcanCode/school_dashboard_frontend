@@ -203,9 +203,12 @@ const EventsPage = () => {
   if (isLoading) return <Loader fullPage />;
 
   return (
-    <div className="container-fluid">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2>Events Calendar</h2>
+    <div className="container-fluid content-page px-0">
+      <div className="content-page-header">
+        <div>
+          <h2 className="content-page-title">Events Calendar</h2>
+          <p className="content-page-subtitle">Publish upcoming activities with a clear timeline.</p>
+        </div>
         <Button onClick={handleOpenCreate}>
           <i className="bi bi-plus-lg me-2"></i> Add Event
         </Button>
