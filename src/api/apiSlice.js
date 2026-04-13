@@ -1,23 +1,25 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL ||
-  (import.meta.env.PROD
-    ? 'https://school-backend-dashboard.onrender.com/api'
-    : 'http://localhost:10000/api');
+// const API_BASE_URL =
+//   import.meta.env.VITE_API_BASE_URL ||
+//   (import.meta.env.PROD
+//     ? 'https://school-backend-dashboard.onrender.com/api'
+//     : 'http://localhost:10000/api');
+
+const API_BASE_URL = "backend.weblysolutions.in ";
 
 export const apiSlice = createApi({
-  reducerPath: 'api',
+  reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: API_BASE_URL,
     prepareHeaders: (headers) => {
-      const token = sessionStorage.getItem('token');
+      const token = sessionStorage.getItem("token");
       if (token) {
-        headers.set('Authorization', `Bearer ${token}`);
+        headers.set("Authorization", `Bearer ${token}`);
       }
       return headers;
     },
   }),
-  tagTypes: ['News', 'Events', 'Gallery', 'School'],
+  tagTypes: ["News", "Events", "Gallery", "School"],
   endpoints: () => ({}),
 });
