@@ -6,7 +6,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 //     ? 'https://school-backend-dashboard.onrender.com/api'
 //     : 'http://localhost:10000/api');
 
-const API_BASE_URL = "backend.weblysolutions.in ";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://backend.weblysolutions.in/api";
 
 export const apiSlice = createApi({
   reducerPath: "api",
