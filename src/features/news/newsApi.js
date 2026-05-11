@@ -12,7 +12,7 @@ export const newsApi = apiSlice.injectEndpoints({
     }),
     createNews: builder.mutation({
       query: (formData) => ({
-        url: '/news',
+        url: 'news',
         method: 'POST',
         body: formData,
       }),

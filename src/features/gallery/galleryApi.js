@@ -8,7 +8,7 @@ export const galleryApi = apiSlice.injectEndpoints({
     }),
     createGalleryItem: builder.mutation({
       query: (formData) => ({
-        url: '/gallery',
+        url: 'gallery',
         method: 'POST',
         body: formData,
       }),

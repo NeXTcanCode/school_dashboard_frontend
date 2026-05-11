@@ -4,28 +4,28 @@ export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     login: builder.mutation({
       query: (credentials) => ({
-        url: '/auth/login',
+        url: 'auth/login',
         method: 'POST',
         body: credentials,
       }),
     }),
     signup: builder.mutation({
       query: (userData) => ({
-        url: '/auth/signup',
+        url: 'auth/signup',
         method: 'POST',
         body: userData,
       }),
     }),
     updateFeatures: builder.mutation({
       query: (payload) => ({
-        url: '/school/features',
+        url: 'school/features',
         method: 'PUT',
         body: payload,
       }),
       invalidatesTags: ['School'],
     }),
     getSchoolProfile: builder.query({
-      query: () => '/school/me',
+      query: () => 'school/me',
       providesTags: ['School'],
     }),
   }),
